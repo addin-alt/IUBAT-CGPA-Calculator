@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IUBAT CGPA Calculator</title>
+
+  <!-- Tailwind CSS CDN (if you are using Tailwind) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+</head>
+
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      href="image/gpa-calculator-green.png"
+      type="image/icon type"
+    />
+    <title>IUBAT CGPA Calculator by Addin</title>
+  </head>
+  <body>
+    <section class="text-black-700 body-font">
+      <div class="container px-15 py-10 mx-auto">
+        <img
+          src="image/gpa-calculator.png"
+          class="rounded mx-auto d-block"
+          alt="IUBAT CGPA Calculator - Addin"
+          width="150"
+          height="100"
+        />
+        <div class="flex flex-col text-center w-full mb-3">
+          <h1
+            class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900"
+          >
+            CGPA Calculator
+          </h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+            Developed by
+            <a
+              href="https://github.com/addin-alt"
+              target="_blank"
+              class="text-blue-700 font-semibold hover:underline"
+            >
+              addin-alt
+            </a>
+            – Calculate your CGPA easily with IUBAT’s official grading
+            system.<br />
+          </p>
+          <br />
+          <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+            <table
+              class="table-auto w-full text-left whitespace-no-wrap table-striped bg-green-400 rounded"
+            >
+              <tbody id="mainTableBody">
+                <tr>
+                  <td
+                    class="px-4 py-3"
+                    style="text-align: center; font-size: 1.5vw"
+                  >
+                    <strong><i>Total Completed Credit & CGPA:</i></strong>
+                  </td>
+                  <td>
+                    <div class="px-4 py-3">
+                      <input
+                        class="form-control"
+                        id="prevCr"
+                        placeholder="Credits"
+                        type="number"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="px-4 py-3">
+                      <input
+                        class="form-control"
+                        id="prevCg"
+                        placeholder="CGPA"
+                        type="number"
+                        step="0.01"
+                      />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="px-4 py-3">
+                      <input
+                        class="form-control"
+                        id="Course1"
+                        placeholder="Course Name"
+                        type="text"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="px-4 py-3">
+                      <input
+                        class="form-control"
+                        id="cr1"
+                        placeholder="Credits"
+                        type="number"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="px-4 py-3">
+                      <select class="nice-select form-control" id="gr1">
+                        <option>A+</option>
+                        <option>A</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B</option>
+                        <option>B-</option>
+                        <option>C+</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>F</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="px-4 py-3">
+                      <input
+                        class="form-control"
+                        id="Course2"
+                        placeholder="Course Name"
+                        type="text"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="px-4 py-3">
+                      <input
+                        class="form-control"
+                        id="cr2"
+                        placeholder="Credits"
+                        type="number"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="px-4 py-3">
+                      <select class="nice-select form-control" id="gr2">
+                        <option>A+</option>
+                        <option>A</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B</option>
+                        <option>B-</option>
+                        <option>C+</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>F</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="px-4 py-3">
+                      <input
+                        class="form-control"
+                        id="Course3"
+                        placeholder="Course Name"
+                        type="text"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="px-4 py-3">
+                      <input
+                        class="form-control"
+                        id="cr3"
+                        placeholder="Credits"
+                        type="number"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="px-4 py-3">
+                      <select class="nice-select form-control" id="gr3">
+                        <option>A+</option>
+                        <option>A</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B</option>
+                        <option>B-</option>
+                        <option>C+</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>F</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="addCourse">
+              <b>+ Add Course</b>
+            </button>
+            <button
+              class="flex ml-auto text-white bg-success border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
+              id="calculateCg"
+            >
+              Calculate CGPA
+            </button>
+          </div>
+          <div
+            class="lg:w-2/3 w-full mx-auto overflow-auto py-10"
+            id="calculatedCgShow"
+          >
+            <table
+              class="table-auto w-full text-center whitespace-no-wrap table-striped bg-green-100 "
+            >
+              <tbody>
+                <tr>
+                  <td
+                    class="px-4 py-3"
+                    style="text-align: center; font-size: 2vw"
+                  >
+                    <h2>Total Credits</h2>
+                    <p style="font-size: 3vw">
+                      <strong id="craditPassed">000</strong>
+                    </p>
+                  </td>
+                  <td
+                    class="px-4 py-3 bg-success"
+                    style="text-align: center; font-size: 2vw"
+                  >
+                    <h2>CGPA</h2>
+                    <p style="font-size: 3vw">
+                      <strong id="cgpaShow">0.00</strong>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="overflow-x-auto p-4">
+          <table
+            class="table-auto border-collapse border border-gray-400 w-full text-center rounded-lg shadow-md"
+          >
+            <thead class="bg-green-200">
+              <tr>
+                <th class="border border-gray-400 px-4 py-2">Marks Range</th>
+                <th class="border border-gray-400 px-4 py-2">Letter Grade</th>
+                <th class="border border-gray-400 px-4 py-2">Grade Point</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-400 px-4 py-2">80 – 100</td>
+                <td class="border border-gray-400 px-4 py-2">A+</td>
+                <td class="border border-gray-400 px-4 py-2">4.00</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 px-4 py-2">75 – 79</td>
+                <td class="border border-gray-400 px-4 py-2">A</td>
+                <td class="border border-gray-400 px-4 py-2">3.75</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 px-4 py-2">70 – 74</td>
+                <td class="border border-gray-400 px-4 py-2">A-</td>
+                <td class="border border-gray-400 px-4 py-2">3.50</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 px-4 py-2">65 – 69</td>
+                <td class="border border-gray-400 px-4 py-2">B+</td>
+                <td class="border border-gray-400 px-4 py-2">3.25</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 px-4 py-2">60 – 64</td>
+                <td class="border border-gray-400 px-4 py-2">B</td>
+                <td class="border border-gray-400 px-4 py-2">3.00</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 px-4 py-2">55 – 59</td>
+                <td class="border border-gray-400 px-4 py-2">B-</td>
+                <td class="border border-gray-400 px-4 py-2">2.75</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 px-4 py-2">50 – 54</td>
+                <td class="border border-gray-400 px-4 py-2">C+</td>
+                <td class="border border-gray-400 px-4 py-2">2.50</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 px-4 py-2">45 – 49</td>
+                <td class="border border-gray-400 px-4 py-2">C</td>
+                <td class="border border-gray-400 px-4 py-2">2.25</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 px-4 py-2">40 – 44</td>
+                <td class="border border-gray-400 px-4 py-2">D</td>
+                <td class="border border-gray-400 px-4 py-2">2.00</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 px-4 py-2">00 – 39</td>
+                <td class="border border-gray-400 px-4 py-2">F</td>
+                <td class="border border-gray-400 px-4 py-2">0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let courseNo = 3;
+      document.getElementById("addCourse").addEventListener("click", () => {
+        courseNo += 1;
+        let cr = "cr" + courseNo;
+        let gr = "gr" + courseNo;
+
+        let strq = `
+            <tr>
+              <td><div class="px-4 py-3"><input class="form-control" placeholder="Course Name" type="text"></div></td>
+              <td><div class="px-4 py-3"><input class="form-control" id="${cr}" placeholder="Credits" type="number"></div></td>
+              <td><div class="px-4 py-3">
+                  <select class="nice-select form-control" id="${gr}">
+                    <option>A+</option><option>A</option><option>A-</option>
+                    <option>B+</option><option>B</option><option>B-</option>
+                    <option>C+</option><option>C</option>
+                    <option>D</option><option>F</option>
+                  </select>
+              </div></td>
+            </tr>`;
+        document
+          .getElementById("mainTableBody")
+          .insertAdjacentHTML("beforeend", strq);
+      });
+
+      document.getElementById("calculateCg").addEventListener("click", () => {
+        let gradeMap = {
+          "A+": 4.0,
+          A: 3.75,
+          "A-": 3.5,
+          "B+": 3.25,
+          B: 3.0,
+          "B-": 2.75,
+          "C+": 2.5,
+          C: 2.25,
+          D: 2.0,
+          F: 0.0,
+        };
+
+        let totalCradit = 0;
+        let totalCgSum = 0;
+
+        for (let i = 1; i <= courseNo; i++) {
+          let cr = document.getElementById("cr" + i)?.value || 0;
+          let gr = document.getElementById("gr" + i)?.value;
+          let cg = gradeMap[gr] || 0;
+          totalCradit += Number(cr);
+          totalCgSum += Number(cg) * Number(cr);
+        }
+
+        let prevCg = Number(document.getElementById("prevCg").value);
+        let prevCr = Number(document.getElementById("prevCr").value);
+        totalCgSum += prevCg * prevCr;
+        totalCradit += prevCr;
+
+        let finalCg = totalCgSum / totalCradit || 0;
+
+        document.getElementById("craditPassed").innerHTML = totalCradit;
+        document.getElementById("cgpaShow").innerHTML = finalCg.toFixed(2);
+      });
+    </script>
+
+    <footer class="text-center p-6 bg-gray-200 mt-6">
+      <p class="mb-3">
+        &copy; 2025 International University of Business Agricultue and Technology. All Rights
+        Reserved.
+        <br> Let's connect with developer-
+      </p>
+
+      <div class="flex justify-center space-x-6">
+        <!-- Facebook -->
+        <a
+          href="https://www.facebook.com/addin.alt"
+          target="_blank"
+          class="text-blue-600 hover:text-blue-800"
+        >
+          <i class="fab fa-facebook fa-lg"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/addin_alt/"
+          target="_blank"
+          class="text-pink-500 hover:text-pink-700"
+        >
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          href="https://linkedin.com/in/addin-alt"
+          target="_blank"
+          class="text-blue-500 hover:text-blue-700"
+        >
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+
+        
+      </div>
+    </footer>
+
+    <!-- Font Awesome CDN (add in <head>) -->
+    <script
+      src="https://kit.fontawesome.com/your-kit-id.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
