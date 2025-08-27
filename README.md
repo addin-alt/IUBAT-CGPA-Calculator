@@ -28,11 +28,6 @@ This tool allows students of **IUBAT (International University of Business Agric
 - **JavaScript (ES6)** – Logic for GPA/CGPA calculation
 
 ---
-
-## 📸 Screenshot
-
-![CGPA Calculator Screenshot](image/gpa-calculator.png)
-
 ---
 
 ## ⚙️ Usage
